@@ -262,38 +262,38 @@ public class main extends javax.swing.JFrame {
         FuerzaAvatar.setForeground(new java.awt.Color(255, 255, 255));
         FuerzaAvatar.setText("Fuerza Avatar");
         PanelCPU.add(FuerzaAvatar);
-        FuerzaAvatar.setBounds(240, 250, 160, 17);
+        FuerzaAvatar.setBounds(250, 250, 160, 17);
 
         FuerzaSM.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         FuerzaSM.setForeground(new java.awt.Color(255, 255, 255));
         FuerzaSM.setText("Fuerza Show Mas");
         PanelCPU.add(FuerzaSM);
-        FuerzaSM.setBounds(0, 250, 190, 17);
+        FuerzaSM.setBounds(10, 250, 190, 17);
 
         VidaAvatar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         VidaAvatar.setForeground(new java.awt.Color(255, 255, 255));
         VidaAvatar.setText("Vida Avatar");
         PanelCPU.add(VidaAvatar);
-        VidaAvatar.setBounds(240, 280, 160, 17);
+        VidaAvatar.setBounds(250, 280, 160, 17);
 
         VidaSM.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         VidaSM.setForeground(new java.awt.Color(255, 255, 255));
         VidaSM.setText("Vida Show Mas");
         PanelCPU.add(VidaSM);
-        VidaSM.setBounds(0, 280, 200, 17);
+        VidaSM.setBounds(10, 280, 200, 17);
 
         TurnoSM.setBackground(new java.awt.Color(255, 255, 255));
         TurnoSM.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TurnoSM.setForeground(new java.awt.Color(255, 255, 255));
         TurnoSM.setText("Agilidad Show Mas");
         PanelCPU.add(TurnoSM);
-        TurnoSM.setBounds(0, 220, 180, 20);
+        TurnoSM.setBounds(10, 220, 180, 20);
 
         TurnoAvatar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TurnoAvatar.setForeground(new java.awt.Color(255, 255, 255));
         TurnoAvatar.setText("Agilidad Avatar");
         PanelCPU.add(TurnoAvatar);
-        TurnoAvatar.setBounds(240, 220, 160, 20);
+        TurnoAvatar.setBounds(250, 220, 160, 20);
 
         jLabel15.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -306,7 +306,7 @@ public class main extends javax.swing.JFrame {
         Estado_CPU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Estado_CPU.setText("ESTADO CPU");
         PanelCPU.add(Estado_CPU);
-        Estado_CPU.setBounds(50, 90, 340, 20);
+        Estado_CPU.setBounds(40, 90, 340, 20);
 
         jLabel19.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(153, 153, 255));
