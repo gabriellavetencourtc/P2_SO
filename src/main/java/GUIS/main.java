@@ -4,6 +4,9 @@
  */
 package GUIS;
 
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
+
 
 /**
  *
@@ -473,7 +476,93 @@ public class main extends javax.swing.JFrame {
         });
     }
     
-  
+        public void setAgilidadAvatar(String Avatar) {
+        this.TurnoAvatar.setText(Avatar);
+
+    }
+
+    public void setAgilidadSM(String SM) {
+        this.TurnoSM.setText(SM);
+
+    }
+
+    public void setVidaSM(String SM) {
+        this.VidaSM.setText(SM);
+
+    }
+
+    public void setFuerzaSM(String SM) {
+        this.FuerzaSM.setText(SM);
+    }
+
+    public void setFuerzaAvatar(String Avatar) {
+        this.FuerzaAvatar.setText(Avatar);
+    }
+
+    public void setVidaAvatar(String Avatar) {
+        this.VidaAvatar.setText(Avatar);
+
+    }
+
+    public JTextPane getColaR_CN() {
+        return ColaR_CN;
+    }
+
+    public JTextPane getCola3_CN() {
+        return Cola3_CN;
+    }
+
+    public JTextPane getCola2_CN() {
+        return Cola2_CN;
+    }
+
+    public JTextPane getCola1_CN() {
+        return Cola1_CN;
+    }
+
+    public JTextPane getColaR_Nick() {
+        return ColaR_Nick;
+    }
+
+    public JTextPane getCola3_Nick() {
+        return Cola3_Nick;
+    }
+
+    public JTextPane getCola2_Nick() {
+        return Cola2_Nick;
+    }
+
+    public JTextPane getCola1_Nick() {
+        return Cola1_Nick;
+    }
+    
+    
+    public JLabel getSMWin(){
+        return Contador_SM;
+    }
+    
+    public JLabel getAvatarWin(){
+        return Contador_Avatar;
+    }
+    public JLabel getEstadoCPU() {
+        return Estado_CPU;
+    }
+    
+    public JLabel getPersonajeSMLabel() {
+        return Personaje_SM; 
+    }
+
+    public void setPersonajeSMLabel(String text) {
+        Personaje_SM.setText(text);
+    }
+
+    public JLabel getPersonajeAvatarLabel() {
+        return Personaje_Avatar; 
+    }
+
+    public void setPersonajeAvatarLabel(String text) {
+        Personaje_Avatar.setText(text);
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -130,7 +130,21 @@ public class Ganadores extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+public JTextArea getListSM() {
+        return listSM;
+    }
 
+    public void setListSM(JTextArea listSM) {
+        this.listSM = listSM;
+    }
+
+    public JTextArea getListAvatar() {
+        return listAvatar;
+    }
+
+    public void setListAvatar(JTextArea listAvatar) {
+        this.listAvatar = listAvatar;
+    }
     /**
      * @param args the command line arguments
      */

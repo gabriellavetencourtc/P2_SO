@@ -103,6 +103,35 @@ public class Lista {
             return previousLast;
         }   
     }
+    public String mostrarLista(){
+        if(isEmpty()){
+            return null;
+        }else{
+            String fullList = "";
+            Nodo aux = pFirst;
+            for(int i = 0; i < size; i++){
+                fullList += aux.getData() + "\n";
+                aux = aux.getpNext();
+                }
+            return fullList;
+            }
+    }
+    
+    public String mostrarLista1() {
+        if (isEmpty()) {
+            return "La lista esta vacia";
+        } else {
+            StringBuilder builder = new StringBuilder();
+            Nodo current = this.pFirst;
+            while (current != null) {
+                Personajes character = (Personajes) current.getData();
+                builder.append(character.getId()).append(",");
+                current = current.getpNext();
+            }
+            return builder.toString().trim(); // trim to eliminarPersonaje the last extra space
+        }
+    }
+
     
      public boolean existePersonaje(Personajes p) {
         Nodo currentNode = this.pFirst;
