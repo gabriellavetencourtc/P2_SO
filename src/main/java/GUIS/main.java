@@ -6,6 +6,12 @@ package GUIS;
 
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
+import MainClasses.IA;
+import MainClasses.Administrador;
+import MainClasses.Lista;
+import java.util.concurrent.Semaphore;
+import javax.swing.JOptionPane;
+//PRUEBA FEDE
 
 
 /**
@@ -13,12 +19,25 @@ import javax.swing.JTextPane;
  * @author gabriellavetencourtc
  */
 public class main extends javax.swing.JFrame {
-
+    private IA CPU;
+    private Ganadores ganadoresUI;
     /**
      * Creates new form main_UI
      */
     public main() {
         initComponents();
+        
+        Lista lganadores = new Lista();
+        Lista lganadoresSM = new Lista();
+        Lista lganadoresAvatar = new Lista();
+        Semaphore mutex = new Semaphore(1);
+        ganadoresUI = new Ganadores();
+        
+        this.CPU = new IA(mutex, lganadores,lganadoresSM,lganadoresAvatar, this, ganadoresUI);        
+        Administrador admin = new Administrador(CPU, mutex, this);
+        
+        admin.start();
+        this.CPU.start();
 
     }
 
@@ -427,11 +446,28 @@ public class main extends javax.swing.JFrame {
 
     private void SetTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetTimeActionPerformed
         // TODO add your handling code here:
-
+        try {
+            int dur = Integer.parseInt(this.DuracionCombate.getText());
+            if (dur < 0) {
+                JOptionPane.showMessageDialog(this, "Por favor ingrese un número válido");
+            } else {
+                this.CPU.setDur(dur);
+            }
+        } catch (NumberFormatException e) {
+            
+            JOptionPane.showMessageDialog(this, "Por favor ingrese un número entero válido.");
+        }
     }//GEN-LAST:event_SetTimeActionPerformed
 
     private void verGanadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGanadoresActionPerformed
+    if (Integer.parseInt(this.Contador_SM.getText()) == 0 || Integer.parseInt(this.Contador_Avatar.getText()) == 0){
+             JOptionPane.showMessageDialog(this, "Se necesitan ganadores de ambos equipos");
+            }else{
+            this.ganadoresUI.setVisible(true);
 
+            this.ganadoresUI.getListSM().setText(this.CPU.listaGANADORESsm.mostrarLista());
+            this.ganadoresUI.getListAvatar().setText(this.CPU.listaGANADORESavatar.mostrarLista());
+            }
     }//GEN-LAST:event_verGanadoresActionPerformed
 
     /**
