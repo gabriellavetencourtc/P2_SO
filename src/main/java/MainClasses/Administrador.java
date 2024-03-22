@@ -159,7 +159,7 @@ public class Administrador extends Thread {
         }
     }
 
-// Método para manejar el cambio de prioridad de los personajes de Street Fighter
+// Método para manejar el cambio de prioridad de los personajes de Show mas
     private void prioridadSM(Personajes p, Lista lactual) {
         if (lactual == smCOLA2) {
             proximoLista(p, lactual, smCOLA1);
